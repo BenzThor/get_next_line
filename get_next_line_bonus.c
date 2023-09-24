@@ -108,7 +108,7 @@ char	*get_next_line(int fd)
 	static t_list	*lst[4096];
 	char			*next_line;
 
-	if ((fd < 0 && fd < 4095) || BUFFER_SIZE <= 0)
+	if ((fd < 0 || fd > 4095) || BUFFER_SIZE <= 0)
 		return (NULL);
 	if (function_to_get_the_line_up_to_new_line(fd, lst) == -1)
 	{
