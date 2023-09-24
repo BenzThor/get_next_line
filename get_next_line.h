@@ -32,5 +32,6 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size);
 void	copy_str(t_list *list, char *str);
 void	ft_add_elem(t_list **lst, char *buf);
 char	*get_next_line(int fd);
+t_list	*ft_lstlast(t_list *lst);
 
 #endif

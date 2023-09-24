@@ -43,15 +43,17 @@ void	ft_create_last_node_and_free(t_list **lst)
 	int		k;
 	int		i;
 
-	buf = malloc(BUFFER_SIZE + 1);
 	return_node = malloc(sizeof(t_list));
-	if (!buf || !return_node)
+	if (!return_node)
 		return ;
 	last_node = ft_lstlast(*lst);
 	i = 0;
 	k = 0;
 	while (last_node->str_buf[i] && last_node->str_buf[i] != '\n')
 		i++;
+	buf = malloc(BUFFER_SIZE + 1 - i);
+	if (!buf)
+		return ;
 	while (last_node->str_buf[i] && last_node->str_buf[++i])
 		buf[k++] = last_node->str_buf[i];
 	buf[k] = '\0';

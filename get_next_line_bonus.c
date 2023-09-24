@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 void	ft_clean(t_list **lst, char *buf, t_list *return_node)
 {
@@ -43,15 +43,17 @@ void	ft_create_last_node_and_free(t_list **lst)
 	int		k;
 	int		i;
 
-	buf = malloc(BUFFER_SIZE + 1);
 	return_node = malloc(sizeof(t_list));
-	if (!buf || !return_node)
+	if (!return_node)
 		return ;
 	last_node = ft_lstlast(*lst);
 	i = 0;
 	k = 0;
 	while (last_node->str_buf[i] && last_node->str_buf[i] != '\n')
 		i++;
+	buf = malloc(BUFFER_SIZE + 1 - i);
+	if (!buf)
+		return ;
 	while (last_node->str_buf[i] && last_node->str_buf[++i])
 		buf[k++] = last_node->str_buf[i];
 	buf[k] = '\0';
@@ -106,7 +108,7 @@ char	*get_next_line(int fd)
 	static t_list	*lst[4096];
 	char			*next_line;
 
-	if (fd < 0 && fd < 4095 || BUFFER_SIZE <= 0)
+	if ((fd < 0 && fd < 4095) || BUFFER_SIZE <= 0)
 		return (NULL);
 	if (function_to_get_the_line_up_to_new_line(fd, lst) == -1)
 	{
@@ -132,7 +134,7 @@ int	main(void)
 	int		fd2;
 	char	*line;
 	int		lines;
-
+Achieve
 	lines = 0;
 
 	fd1 = open("example_file.txt", O_RDONLY);
