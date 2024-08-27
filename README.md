@@ -10,16 +10,16 @@
 </p>
 
 <h3 align="center">
-	<a href="#-project-overview">🔭 Project Overview</a>
+	<a href="#-project-overview">📝 Project Overview</a>
 	<span> · </span>
-	<a href="#-objectives">💡 Objectives</a>
+	<a href="#-objectives">🎯 Objectives</a>
 </h3>
 
-## 🔭 Project Overview
+## 📝 Project Overview
 
 The `get-next-line` project focuses on implementing a function that reads a single line ending with a newline character ('\n') from a file descriptor. The function is designed to handle lines of unknown length, dynamically managing memory as needed.
 
-## 💡 Objectives
+## 🎯 Objectives
 
 ### Dynamic Line Reading: 
 
