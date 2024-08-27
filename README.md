@@ -10,9 +10,9 @@
 </p>
 
 <h3 align="center">
-	<a href="#project-overview">Project Overview</a>
+	<a href="#-project-overview">🔭 Project Overview</a>
 	<span> · </span>
-	<a href="#objectives">Objectives</a>
+	<a href="#-objectives">💡 Objectives</a>
 </h3>
 
 ## 🔭 Project Overview
